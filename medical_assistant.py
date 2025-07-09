@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import google.generativeai as genai  # ✅ Gemini AI
+import google.generativeai as genai   
 
 # Configure page
 st.set_page_config(
@@ -55,7 +55,7 @@ if uploaded_file:
                     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
                     # Load Gemini model and generate
-                    model = genai.GenerativeModel("models/gemini-pro")  ✅
+                    model = genai.GenerativeModel("models/gemini-pro")  
                     response = model.generate_content(analysis_text)
 
                     # Extract text
