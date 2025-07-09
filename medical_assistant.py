@@ -55,7 +55,7 @@ if uploaded_file:
                     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
                     # Load Gemini model and generate
-                    model = genai.GenerativeModel("models/gemini-pro")  
+                    model = genai.GenerativeModel("models/gemini-2.5-pro")  
                     response = model.generate_content(analysis_text)
 
                     # Extract text
